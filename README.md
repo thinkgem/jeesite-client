@@ -21,11 +21,12 @@ NW.js 跨平台，体积小，使用简单，官网：https://nwjs.io
 
 * for win x64 ：适应于现代 Windows 7、8、10、11 操作系统，Chrome 版本为 110。
 * for xp x86 ：适应于较老的 Windows XP 操作系统，Chrome 版本为 50，这是最后一个支持 XP 系统的 Chrome。如果使用 JeeSite Vue 版本时，请修改 vite.config.js 和 build/vite/plugin/index.ts 中的 Chrome 版本号为 50 即可。
+* for macOS ：适应于 macOS 操作系统
 
 ## 如何跨平台？
 
-1. 本项目实现了 Windows 的安装程序，如果想使用 Linux 或 MacOS 操作系统，可以通过 [NW.js 下载](https://nwjs.io/downloads/) 对应系统环境软件。
-2. 然后将本项目中的 package.js 拷贝到，对应系统环境下，即可。
+1. 本项目实现了 Windows、macOS 的安装程序，如果想使用 Linux 等操作系统，可以通过 [NW.js 下载](https://nwjs.io/downloads/) 对应系统环境软件。
+2. 然后将本项目中的 package.js 拷贝到，对应系统环境下指定目录。
 3. 如果您有兴趣，希望可以 Pull Requests。
 
 ## 如何用到自己的项目上？
