@@ -1,0 +1,68 @@
+{
+  "name": "jeesite-client",
+  "version": "5.5.0",
+  "description": "This is a jeesite client",
+  "main": "src/main.js",
+  "scripts": {
+    "bootstrap": "yarn install",
+    "start": "electron .",
+    "build": "rimraf dist && electron-builder -mw --x64 --arm64",
+    "build:win": "rimraf dist && electron-builder --win --x64",
+    "build:linux": "rimraf dist && electron-builder --linux --x64 --arm64",
+    "build:macos": "rimraf dist && electron-builder --macos --x64 --arm64",
+    "uninstall": "rimraf yarn.lock && rimraf package-lock.json && rimraf node_modules",
+    "update": "yarn global add npm-check-updates && ncu -u"
+  },
+  "repository": "https://gitee.com/thinkgem/jeesite-client",
+  "keywords": [
+    "Electron",
+    "JeeSite"
+  ],
+  "author": "ThinkGem",
+  "license": "Apache-2.0",
+  "homepage": "https://jeesite.com",
+  "devDependencies": {
+    "electron": "^27.0.2",
+    "electron-builder": "^24.8.0",
+    "rimraf": "^5.0.5"
+  },
+  "build": {
+    "productName": "JeeSite Client",
+    "appId": "jeesite-client",
+    "copyright": "5.5.0",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*"
+    ],
+    "win": {
+      "icon": "./src/icons/app.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "icon": "./src/icons/app.png",
+      "target": [
+        "deb"
+      ]
+    },
+    "mac": {
+      "icon": "./src/icons/app.png",
+      "darkModeSupport": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./src/icons/app.ico",
+      "uninstallerIcon": "./src/icons/app.ico",
+      "installerHeaderIcon": "./src/icons/app.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "JeeSite"
+    }
+  }
+}
