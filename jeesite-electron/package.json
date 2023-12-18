@@ -49,7 +49,7 @@
       ]
     },
     "mac": {
-      "icon": "./src/icons/app.png",
+      "icon": "./src/icons/mac.png",
       "darkModeSupport": true
     },
     "nsis": {
